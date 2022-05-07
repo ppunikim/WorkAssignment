@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    header {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    header h2 {
+      font-size: 28px;
+    }
+    header h3 {
+      line-height: 44px;
+      font-size: 22px;
+    }
+    #wrap {
+      /* flex : 부모입장에서 자식을 한 방에 나란히 수평정렬*/
+      display: flex;
+      /* 아이템이 배치되는 축의 방향을 결정하는 속성 (column 세로방향으로 배치 ) */
+      flex-direction: column;
+      /* 아이템 중앙에 배열 */
+      align-items: center;
+      /* 아이템 간격 균일하게 배치 
+      justify-content: stretch;*/
+      /* 요소를 일반적인 문서 흐름에 따라 배치 */
+      position: relative;
+      /* height 속성의 사용값이 자신의 값보다 작아지는걸 방지 */
+      min-height: 100vh;
+      width: 100%;
+      /* rem은 최상위 엘리먼트인 body의 폰트 크기를 기준으로 값이 적용된다 default값 16px*/
+      padding: 4rem 2rem;
+      z-index: 3;
+      background-image: url(../assets/image/bg.jpg);
+      background-size: cover;
+    }
+    #date {
+      padding: 5px 10px;
+      font-size: 17px;
+    }
+    footer {
+      margin-top: 300px;
+      color: #ccc;
+      font-size: 17px;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 20px;
+    }
+  </style>
+  <body>
+    <div id="wrap">
+      <header>
+        <h2>셀핏</h2>
+        <h3>do it list</h3>
+      </header>
+      <section>
+        <!--<div><input type="month" /></div> -->
+        <div><input type="date" id="date" /></div>
+      </section>
+      <footer>
+        <p>
+          먹는다고 다 실찌진 없는다.<br />
+          많이 먹어서 살찔 뿐
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
